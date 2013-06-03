@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Study</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Study</h1>
+    % if page == 10:
+    <form method="post" action="./calc.py">
+    % else:
+    <form method="post" action="./study.py">
+    % endif
+      % for d in list:
+      <p id="image">
+	<img src="http://${ip}:8000/cgi-bin/images/${d.genreId}/${d.name}" width="200" height="200"/ ><br />
+	<input type="checkbox" name="like" value="${d.id}">Like!
+      </p>								  
+      % endfor
+      <div id="submit">
+	<input type="submit" value="Next" id="submit"/>
+	<input type="hidden" name="userId" value="${userId}" />
+	<input type="hidden" name="page" value="${page}" />
+      </div>
+    </form>
+  </body>
+</html

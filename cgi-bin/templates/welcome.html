@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Welcome</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">  
+      <!-- 
+	   span {
+	   color:#808080;
+	   }
+	-->  
+    </style>
+
+    <script src="http://www.google.com/jsapi"></script>
+    <script>
+      google.load("jquery", "1.7.1");
+      google.load("jqueryui", "1.8.17");
+    </script>
+    <script type="text/javascript">
+      <!--
+	  function update(){
+	    if($("#name").val() == ""){
+	      alert("Please enter your name");
+	      return false;
+	    } else{
+	      $("form").submit();
+	    }
+	  }
+	// -->
+      </script>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>
+      Please enter your name.
+    </p>
+    <div id="form">
+      <span>
+	* alphabet only<br />
+	* example: kamiya
+      </span>
+      <form method="post" action="./register.py" name="form">
+	<input type="text" size="30" name="name" id="name"/>
+	<input type="button" value=" register " onclick="update()"/>
+      </form>
+    </div>
+  </body>
+</html>
