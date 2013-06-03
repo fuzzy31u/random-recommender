@@ -17,7 +17,7 @@ def main():
     ## 
     print "Content-type: text/html\n"
     page = 1
-    connector = MySQLdb.connect(host="localhost",db="random-recommender",user="root",passwd="")
+    connector = MySQLdb.connect(host="localhost",db="random_recommender",user="root",passwd="")
     connector.autocommit(True)
     cursor = connector.cursor()
 
@@ -75,7 +75,7 @@ def main():
     t = Template(filename = dirpath + "/templates/study.html")
  
 #    ip = os.environ["REMOTE_ADDR"]
-    ip = "54.249.120.194"
+    ip = "localhost"
     data = {"list": list, "ip": ip, "page": page, "userId": userId}
  
     html = t.render(**data)

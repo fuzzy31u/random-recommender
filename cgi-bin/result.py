@@ -12,7 +12,7 @@ def main():
     print "Content-type: text/html\n"
     totalShownCnt = 60
     totalLikeCnt = 0
-    connector = MySQLdb.connect(host="localhost",db="random-recommender",user="root",passwd="")
+    connector = MySQLdb.connect(host="localhost",db="random_recommender",user="root",passwd="")
     connector.autocommit(True)
     cursor = connector.cursor()
 
