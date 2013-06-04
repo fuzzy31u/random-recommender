@@ -12,7 +12,7 @@ def main():
 
     ## 
     print "Content-type: text/html\n"
-    connector = MySQLdb.connect(host="localhost",db="research",user="root",passwd="")
+    connector = MySQLdb.connect(host="localhost",db="random_recommender",user="root",passwd="")
     connector.autocommit(True)
     cursor = connector.cursor()
 

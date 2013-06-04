@@ -7,13 +7,13 @@
   <body>
     <h1>Analyze</h1>
     % if page == 10:
-    <form method="post" action="./result.py">
+    <form method="get" action="./result.py">
     % else:
-    <form method="post" action="./analyze.py">
+    <form method="get" action="./analyze.py">
     % endif
       % for d in dispList:
       <p id="image">
-	<img src="http://${ip}:8000/cgi-bin/images/${d.genreId}/${d.name}" width="200" height="200"/><br />
+	<img src="http://${ip}:8080/cgi-bin/images/${d.genreId}/${d.name}" width="200" height="200"/><br />
 	<input type="checkbox" name="like" value="${d.id}">Like!
       </p>								  
       % endfor

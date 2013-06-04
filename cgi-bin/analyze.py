@@ -64,7 +64,7 @@ def main():
     
                 name = result4[0][0]
            
-                image = Image(imageId, name, k)
+                image = Image(imageId, name, i)
                 list.append(image)
     
         random.shuffle(list)

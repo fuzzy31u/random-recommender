@@ -1,4 +1,4 @@
 import cgi
 import BaseHTTPServer,CGIHTTPServer
 
-BaseHTTPServer.HTTPServer(('127.0.0.1', 80), CGIHTTPServer.CGIHTTPRequestHandler ).serve_forever()
+BaseHTTPServer.HTTPServer(('0.0.0.0', 8080), CGIHTTPServer.CGIHTTPRequestHandler).serve_forever()
